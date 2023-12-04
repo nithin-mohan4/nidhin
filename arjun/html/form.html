@@ -1,0 +1,111 @@
+<html>
+<head><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<style>
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+input:checked + .slider {
+  background-color: blue;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px black;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius:30%%;
+}
+
+.slider.round:before {
+  border-radius: 70%;
+}
+
+</style>
+<body>
+
+<form>
+  <h1> Registration Form</h1>
+  first name<input type="text" name=first name><br>
+<br>
+  last name<input type ="text" name=last name><br>
+<br>
+gender<input type="radio" id="gender"name="gender" value="male"/>male
+      <input type="radio" id="gender"name="gender" value="female"/>female<br>
+<br>
+address:<input type="text" name="address"><br>
+<br>
+state<select>
+<option value="kerala">Kerala</option>
+<option value="karnataka">karnataka</option>
+<option value="Assam">Assam</option>
+</select> <br>
+<br>
+ phone no:<input type="text" name=phoneno placeholder="+91"><br>
+ <br>
+ programming language known<br>
+ <input type="checkbox" name=JAVA>JAVA<br>
+ <input type="checkbox" name=PHP>PHP<br>
+ <input type="checkbox" name=PYTHON>PYTHON<br>
+ <input type="checkbox" name=HTML>HTML<br>
+<br>
+<input type="submit"name=submit>
+</form>
+
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+
+<label class="switch">
+  <input type="checkbox" checked>
+  <span class="slider round"></span>
+</label>
+</body>
+</head>
+</html>
+
+
+

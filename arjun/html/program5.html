@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Content on Mouse Hover</title>
+</head>
+<body>
+    <h1 id="hoverArea">Hover over me!</h1>
+    <div id="content">
+        <img id="image" src="default-image.jpg" alt="Default Image">
+        <p id="text">This is the default text.</p>
+    </div>
+
+    <script>
+        const hoverArea = document.getElementById("hoverArea");
+        const image = document.getElementById("image");
+        const text = document.getElementById("text");
+
+        // Event handler for mouse hover
+        hoverArea.addEventListener("mouseover", function() {
+            // Change the image and text when the mouse hovers over the element
+            image.src = "new-image.jpg";
+            text.textContent = "This is the new text!";
+        });
+
+        // Event handler for mouse out (optional, to revert to the default content)
+        hoverArea.addEventListener("mouseout", function() {
+            // Revert to the default image and text when the mouse moves out
+            image.src = "default-image.jpg";
+            text.textContent = "This is the default text.";
+        });
+    </script>
+</body>
+</html>
